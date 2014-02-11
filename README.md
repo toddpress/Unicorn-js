@@ -14,7 +14,7 @@ Please try our demo:  ![image](https://f.cloud.github.com/assets/39191/2134420/4
 
 ### Accolades
 
-> *"I had given up jQuery completely. But then Unicorn.js brought me back. The sweet, pulsating rainbow of joy is a part of my daily routine now."* <br> **-[Paul Irish][3]**, front-end developer &amp; general badass 
+> *"I had given up jQuery completely. But then Unicorn.js brought me back. The sweet, pulsating rainbow of joy is a part of my daily routine now."* <br> **-[Paul Irish][1]**, front-end developer &amp; general badass 
 
     
 ### All this functionality must come with a price, no?
