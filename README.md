@@ -3,7 +3,7 @@ Carve hours from development time with **unicorn.js**! This revolutionary JQuery
 
 ----------
 
-> *"I truly feel that Unicorn.js is to become as commonplace as reset.css in web development. As its usage grows rampantly, I will undoubtedly be hailed as the Sir Isaac Newton of HTML Elements"*  <br> **-Todd,*** creator*
+> *"I truly feel that Unicorn.js is to become as commonplace as reset.css in web development. As its usage grows rampantly, I will undoubtedly be hailed as the Sir Isaac Newton of HTML Elements"*  <br> **-Todd,** *creator*
 
 ### All this functionality must come with a price, no?
 In short, **NO**!. After much soul-searching -- and rejections from [Code Canyon][2] -- I decided to release this web development panacea free of charge. ***You heard right, folks...* FREE!!!** 
