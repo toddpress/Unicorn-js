@@ -1,6 +1,10 @@
 /* Use as you please, no attribution necessary */
 /* Thanks to the dudes at http://jqueryboilerplate.com/ for speeding up development time */
 
+/* 
+	"I had given up jQuery completely. But then Unicorn.js brought me back. The sweet, pulsating rainbow of joy is a part of my daily routine now."
+	Many, many thanks to @paul_irish of http://www.paulirish.com/ for his gleaming review.
+*/
 ;(function ( $, window, document, undefined ) {
 		// Create the defaults once
 		var pluginName = "unicorn",
