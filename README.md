@@ -16,7 +16,7 @@ After including `JQuery 1.7+`, simply download and include [**<strong>unicorn.js
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="path/to/unicorn/unicorn.js"></script>
 
-With the brunt of the work done, simply add another script block below the perceding two:
+With the brunt of the work done, simply add another script block below the preceding two:
 
     <script>
     $(function() {
