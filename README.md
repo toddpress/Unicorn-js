@@ -37,7 +37,7 @@ The dazzlingly dazzling `unicorn()` method will attach mouse event handlers to t
 
 **Options**
 
-<ol><li>Saturation<ul><li>changes the intensity of colours<li>accepts integer values between 1 and 100</li></ul></li><li>Light<ul><li>reflects the colours' brightness<li>accepts integer values between 1 and 100</li><li>defaults to 50, as values of 100 will produce solid white text</li></ul></li><li>Speed (ms)<ul><li>the length of one cycle<li>accepts integer values representing ms (1s = 1000ms)</li></ul></li><li>ltr<ul><li>specifies the direction of "<strong>bow-flow</strong>," standing for `left to right`<li>accepts binary value of true or false</li><li>defaults to false, so <strong>bow-flow</strong> is right to left</li></ul></li></ol>
+<ol><li>Saturation<ul><li>changes the intensity of colours<li>accepts integer values between 1 and 100</li></ul></li><li>Light<ul><li>reflects the colours' brightness<li>accepts integer values between 1 and 100</li><li>defaults to 50, as values of 100 will produce solid white text</li></ul></li><li>Speed (ms)<ul><li>the length of one cycle<li>accepts integer values representing ms (1s = 1000ms)</li></ul></li><li>ltr<ul><li>specifies the direction of "<strong>bow-flow</strong>," standing for `left to right`<li>accepts Boolean value of true or false</li><li>defaults to false, so <strong>bow-flow</strong> is right to left</li></ul></li></ol>
 
 Let's examine the following:
 
