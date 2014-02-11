@@ -1,5 +1,12 @@
 ## Unicorn.js, a jQuery plugin for sweet cyclic rainbow text!
+
+
 Carve hours from development time with **unicorn.js**! This revolutionary JQuery plug-in ***not only* applies rainbow colors** to elements' text, ***but also* animates these colors upon hover** in a direction of your choosing! No longer must you worry about rolling you own solution to this commonplace front-end task; just sit back, relax, and let unicorn.js take the wheel. 
+
+
+<a href="https://rawgithub.com/toddpress/Unicorn-js/master/index.html">
+Please try our demo:  ![image](https://f.cloud.github.com/assets/39191/2134420/40fec238-92e4-11e3-88c0-bc3129b4c651.png)
+</a>
 
 ----------
 
