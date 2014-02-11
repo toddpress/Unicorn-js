@@ -71,19 +71,18 @@
 					var hA = $.makeArray(huesArr),
 						len = hA.length-1;
 					hA.shift();
-					console.log(hA);
 					
 					// how many steps per hue angle?
 					// for future use:
-					for(i=0;i<len; i++) {
-						if (hA[i] == hA[i+1]) {
-							count++;
-						} else {
-							break;
-						}
-					}
+					// for(i=0;i<len; i++) {
+						// if (hA[i] == hA[i+1]) {
+							// count++;
+						// } else {
+							// break;
+						// }
+					// }
 					
-					this.count = count;
+					// this.count = count;
 					this.huesArray = huesArr;
 				},
 				
