@@ -3,15 +3,20 @@ Carve hours from development time with **unicorn.js**! This revolutionary JQuery
 
 ----------
 
-> *"I truly feel that Unicorn.js is to become as commonplace as reset.css in web development. As its usage grows rampantly, I will undoubtedly be hailed as the Sir Isaac Newton of HTML Elements"*  <br> **-Todd,** *creator*
+> *"I truly feel that Unicorn.js is to become as commonplace as reset.css in web development. As its usage grows rampantly, I will undoubtedly be hailed as the Sir Isaac Newton of HTML Elements"*  <br> **-Todd**, *creator*
 
+### Accolades
+
+> *"I had given up jQuery completely. But then Unicorn.js brought me back. The sweet, pulsating rainbow of joy is a part of my daily routine now."* <br> **-[Paul Irish][3]**, front-end developer &amp; general badass 
+
+    
 ### All this functionality must come with a price, no?
-In short, **NO**!. After much soul-searching -- and rejections from [Code Canyon][2] -- I decided to release this web development panacea free of charge. ***You heard right, folks...* FREE!!!** 
+In short, **NO**! After much soul-searching -- and rejections from [Code Canyon][2] -- I decided to release this web development panacea free of charge. ***You heard right, folks...* FREE!!!** 
 
 ### I'm sold, but how do get started with Unicorn.js
 *Lucky for you, implementation is simple.*
 
-After including `JQuery 1.7+`, simply download and include [**<strong>unicorn.js</strong>**][2]. For example, let's consider adding the following just before your closing `</body>` tag:
+After including `JQuery 1.7+`, simply download and include [**<strong>unicorn.js</strong>**][3]. For example, let's consider adding the following just before your closing `</body>` tag:
 
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="path/to/unicorn/unicorn.js"></script>
@@ -50,9 +55,13 @@ Let's examine the following:
 
 Now, that's a beauty!
 
-# What're you waiting for??? It's time to get your Bow-Flow on!!!
+# What're you waiting for???
+I think you've got it. <strong>Go, ahead... Get your bow-flow on.</strong>
 <br>
 <br>
  
-  [1]: http://codecanyon.net/
-  [2]: https://raw2.github.com/toddpress/Unicorn-js/master/unicorn.js
+
+
+  [1]: http://www.paulirish.com/
+  [2]: http://codecanyon.net/
+  [3]: https://raw2.github.com/toddpress/Unicorn-js/master/unicorn.js
