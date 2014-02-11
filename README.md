@@ -13,7 +13,7 @@ Carve hours from development time with **unicorn.js**! This revolutionary JQuery
 ### All this functionality must come with a price, no?
 In short, **NO**! After much soul-searching -- and rejections from [Code Canyon][2] -- I decided to release this web development panacea free of charge. ***You heard right, folks...* FREE!!!** 
 
-### I'm sold, but how do get started with Unicorn.js
+### I'm sold, but how do get started with Unicorn.js?
 *Lucky for you, implementation is simple.*
 
 After including `JQuery 1.7+`, simply download and include [**<strong>unicorn.js</strong>**][3]. For example, let's consider adding the following just before your closing `</body>` tag:
