@@ -14,16 +14,17 @@ Please try our demo:  ![image](https://f.cloud.github.com/assets/39191/2134420/4
 
 ### Accolades
 
-> *"I had given up jQuery completely. But then Unicorn.js brought me back. The sweet, pulsating rainbow of joy is a part of my daily routine now."* <br> **-[Paul Irish][1]**, front-end developer &amp; general badass 
+> *"I had given up jQuery completely. But then Unicorn.js brought me back. The sweet, pulsating rainbow of joy is a part of my daily routine now."* <br> **-[Paul Irish][1]**, front-end developer &amp; general badass
 
+<blockquote><em>"[Todd feels] this is truly a harbinger of future web development."</em><br> <strong>-<a href="http://chriscoyier.net/">Chris Coyier</a></strong>, designer at <a href="http://codepen.io/">CodePen</a> & writer at <a href="http://css-tricks.com/">CSS-Tricks</a></blockquote>
     
 ### All this functionality must come with a price, no?
-In short, **NO**! After much soul-searching -- and rejections from [Code Canyon][2] -- I decided to release this web development panacea free of charge. ***You heard right, folks...* FREE!!!** 
+In short, **NO**! After much soul-searching -- and rejections from [Code Canyon][3] -- I decided to release this web development panacea free of charge. ***You heard right, folks...* FREE!!!** 
 
 ### I'm sold, but how do get started with Unicorn.js?
 *Lucky for you, implementation is simple.*
 
-After including `JQuery 1.7+`, simply download and include [**<strong>unicorn.js</strong>**][3]. For example, let's consider adding the following just before your closing `</body>` tag:
+After including `JQuery 1.7+`, simply download and include [**<strong>unicorn.js</strong>**][4]. For example, let's consider adding the following just before your closing `</body>` tag:
 
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="path/to/unicorn/unicorn.js"></script>
@@ -70,5 +71,6 @@ I think you've got it. <strong>Go, ahead... Get your bow-flow on.</strong>
 
 
   [1]: http://www.paulirish.com/
-  [2]: http://codecanyon.net/
-  [3]: https://raw2.github.com/toddpress/Unicorn-js/master/unicorn.js
+  [2]: http://chriscoyier.net/
+  [3]: http://codecanyon.net/
+  [4]: https://raw2.github.com/toddpress/Unicorn-js/master/unicorn.js
