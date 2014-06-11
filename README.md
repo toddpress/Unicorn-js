@@ -17,7 +17,9 @@ Please try our demo:  ![image](https://f.cloud.github.com/assets/39191/2134420/4
 > *"I had given up jQuery completely. But then Unicorn.js brought me back. The sweet, pulsating rainbow of joy is a part of my daily routine now."* <br> **-[Paul Irish][1]**, front-end developer &amp; general badass
 
 <blockquote><em>"[Todd feels] this is truly a harbinger of future web development."</em><br> <strong>-<a href="http://chriscoyier.net/">Chris Coyier</a></strong>, designer at <a href="http://codepen.io/">CodePen</a> & writer at <a href="http://css-tricks.com/">CSS-Tricks</a></blockquote>
-    
+
+<blockquote><em>"Unicorn.js is the next evolutionary step to make the web the magical realm of sparkly beings made of light and whip cream"</em><br> <strong>-<a href="http://v3.desandro.com/">David DeSandro</a></strong>, of Twitter and creator of <a href='http://masonry.desandro.com/'>Masonry</a></blockquote>
+
 ### All this functionality must come with a price, no?
 In short, **NO**! After much soul-searching -- and rejections from [Code Canyon][3] -- I decided to release this web development panacea free of charge. ***You heard right, folks...* FREE!!!** 
 
