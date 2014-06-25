@@ -49,9 +49,8 @@
 			patronus: (patronus || '')
 				? patronus+''
 				: (options.patronus || '')
-					? options['patronus']+'' : '.unicorn',  // My patronus is the majestimythical unicorn:
-																// graceful, yet horse-hung.
-			cursor: options.cursor+'' || 'default', // faux pas, I know. IDGaF. Text cursor sucks.
+					? options['patronus']+'' : '.unicorn',  // My patronus is the majestimythical unicorn
+			cursor: options.cursor+'' || 'default', // faux pas? IDGaF: Text cursor sucks.
 			duration: +options.duration || 1.5,
 			bowFlow: options.bowFlow+'' || 'rtl'
 		};
