@@ -20,11 +20,15 @@ Please try our demo:  ![image](https://f.cloud.github.com/assets/39191/2134420/4
 
 <blockquote><em>"Unicorn.js is the next evolutionary step to make the web the magical realm of sparkly beings made of light and whip cream"</em><br> <strong>-<a href="http://v3.desandro.com/">David DeSandro</a></strong>, of Twitter and creator of <a href='http://masonry.desandro.com/'>Masonry</a></blockquote>
 
+<blockquote><em>https://mtc.cdn.vine.co/r/videos/09F9F8244A1092892368543309824_26dca596279.0.4.15267178649808893943.mp4?versionId=AjyFG1dAUCOY3bX9DMtSItne.lVYwlAC</em><br> <strong>-<a href="http://davidwalsh.name/">David Walsh</a></strong>, MooTools brainchild and Mozilla dev</blockquote>
+
 ### All this functionality must come with a price, no?
 In short, **NO**! After much soul-searching -- and rejections from [Code Canyon][3] -- I decided to release this web development panacea free of charge. ***You heard right, folks...* FREE!!!** 
 
 ### I'm sold, but how do get started with Unicorn.js?
 *Lucky for you, implementation is simple.*
+
+But you probably shouldn't...
 
 After including `JQuery 1.7+`, simply download and include [**<strong>unicorn.js</strong>**][4]. For example, let's consider adding the following just before your closing `</body>` tag:
 
