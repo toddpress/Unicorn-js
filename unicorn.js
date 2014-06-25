@@ -1,139 +1,115 @@
-/* Use as you please, no attribution necessary */
-/* Thanks to the dudes at http://jqueryboilerplate.com/ for speeding up development time */
+(function(__x__){
+  /*\
+  |*| Unicorn.js -- v2, bitches.
+  |*| Copyright (C) 6/24/2014 toddpress
+  |*| Licence: WTFPL http://en.wikipedia.org/wiki/WTFPL#Version_2
+  |*| Terms: Everyone is permitted to copy and distribute verbatim or modified
+  |*| 	copies of this license document, and changing it is allowed as long
+  |*| 	as the name is changed. Or light it on fire.
+  |*| Admissions: the ns bears semblance to, well... you know.
+  |*| Implications: *
+  |*|
+  |*| ## Suggestions? ## -- I'm always open to improvements, so learn me a thing or two.
+  \*/
 
-/* 
-	"I had given up jQuery completely. But then Unicorn.js brought me back. The sweet, pulsating rainbow of joy is a part of my daily routine now."
-	Many, many thanks to @paul_irish of http://www.paulirish.com/ for his gleaming review.
-*/
-;(function ( $, window, document, undefined ) {
-		// Create the defaults once
-		var pluginName = "unicorn",
-				defaults = {
-				saturation: 100,
-				light: 50,
-				speed: 10, // in ms
-				ltr: false // controls "bow-flow." Set to true if you want the colors to flow from left to right.
+  /*\
+  |*| Accolades:
+  |*| 	@paul_irish: "I had given up jQuery completely. But then Unicorn.js brought me back.
+  |*| 		The sweet, pulsating rainbow of joy is a part of my daily routine now."
+  |*| 		web: http://www.paulirish.com/
+  |*|
+  |*| 	@chriscoyier: "[Todd feels] this is truly a harbinger of future web development."
+  |*|		Note: I wrote the entirety of this code on codepen.io, so you can thank CC for
+  |*|			that awesome tool.
+  |*| 		web: http://codepen.io AND http://css-tricks.com/
+  |*|
+  |*| 	@desandro: "Unicorn.js is the next evolutionary step to make the web the magical realm of
+  |*| 		sparkly beings made of light and whip cream."
+  |*|		web: http://v3.desandro.com/ AND https://twitter.com/desandro
+  \*/
+
+  	// Thanks, DW. http://davidwalsh.name/vendor-prefix
+  	// Read his blog, advert $++! Plus it's awesome.
+	var computed = window.getComputedStyle(document.documentElement, ''),
+		pfx = ([].slice.call(computed).join('').match(/-(moz|webkit|ms)-/) ||
+				(computed.Olink === '' && ['', 'o']))[1],
+		prefix = '-' + pfx + '-';
+
+	var sheet = (function() {
+		var style = document.createElement('style');
+
+		style.appendChild(document.createTextNode(''));
+		document.head.appendChild(style);
+
+		return style.sheet;
+	})();
+
+	__x__.patronum = function(patronus, options){
+		var opts = {
+			patronus: (patronus || '')
+				? patronus+''
+				: (options.patronus || '')
+					? options['patronus']+'' : '.unicorn',  // My patronus is the majestimythical unicorn:
+																// graceful, yet horse-hung.
+			cursor: options.cursor+'' || 'default', // faux pas, I know. IDGaF. Text cursor sucks.
+			duration: +options.duration || 1.5,
+			bowFlow: options.bowFlow+'' || 'rtl'
 		};
-		var itv;
 
-		// The actual plugin constructor
-		function Plugin ( element, options ) {
-				this.element = element;
-				this.settings = $.extend( {}, defaults, options );
-				this._defaults = defaults;
-				this._name = pluginName;
-				this.init();
+		var styles = [ // prefixed styles dur
+			{
+				selector: opts.patronus + ' span',
+				rules: [prefix + 'animation: default_text 1.5s linear infinite;',
+						prefix + 'animation-play-state: running, paused;']
+			},
+			{
+				selector: opts.patronus + ':hover span',
+				rules: [prefix + 'animation-name: unicorn;',
+				'cursor: ' + opts.cursor]
+			},
+			{
+				selector: '@' + prefix + 'keyframes unicorn',
+				rules: ['from {color: rgb(255, 0, 0);}','16.6% {color: rgb(255, 0, 255);}',
+					'33.3% {color: rgb(0, 0, 255);}','50% {color: rgb(0, 255, 255);}',
+					'66.6% {color: rgb(0, 255, 0);}','83.3% {color: rgb(255, 255, 0);}',
+					'to {color: rgb(255, 0, 0);}']
+			},
+			{
+				selector: '@' + prefix + 'keyframes default_text',
+				rules: ['to {color: rgb(102, 102, 102);}']
+			}
+		];
+
+		for (var i = 0; i < styles.length; i++) {
+		  sheet.insertRule(styles[i].selector + '{' + styles[i].rules.join('') + '}', i);
 		}
 
-		Plugin.prototype = {
-		
-				init: function () {	
-					var elem = this.element,
-						thisCache = this;
-					this.saturation = Math.abs(this.settings.saturation)>100? 100: Math.abs(this.settings.saturation);
-					this.light = Math.abs(this.settings.light)>100? 100: Math.abs(this.settings.light);
-					
-					this.wrapChars(elem);
-					// get newly created spans, added by wrapChars() method
-					var spans = $(elem).find("span");
-					// make initial hues array, and assign it to a property of Plugin object 
-					this.makeHuesArray(spans);
-					
-					$(elem).on({
-						mouseenter: function(){thisCache.cycleColors(spans, thisCache);},
-						mouseleave: function(){thisCache.stopCycle(spans);}
-					});
-				},
-				
-				
-				wrapChars: function (el) {
-					var txt = $(el).text(),
-						len = txt.length,
-						step = 360/len,
-						output="";
-			
-					for(var i=0; i<len; i++){
-						mC = Math.ceil(i*step);
-						h = mC <= 360 ? mC : 360;
-						output += "<span style='color:hsla("+ h +", 100%, 50%, 1); color: inherit'>"+ txt.charAt(i) +"</span>";
-					}
-					
-					$(el).html(output);
-				},
-				
-				
-				makeHuesArray: function(spans) {
-					var count = 1;
-					huesArr = spans
-						.map(function(){
-							return $(this).attr('style').split(',')[0].split('(')[1];
-						});
-					var hA = $.makeArray(huesArr),
-						len = hA.length-1;
-					hA.shift();
-					
-					// how many steps per hue angle?
-					// for future use:
-					// for(i=0;i<len; i++) {
-						// if (hA[i] == hA[i+1]) {
-							// count++;
-						// } else {
-							// break;
-						// }
-					// }
-					
-					// this.count = count;
-					this.huesArray = huesArr;
-				},
-				
-				
-				shiftHuesArray: function() {
-					var hArray = $.makeArray(this.huesArray);			
-					
-					if (!this.settings.ltr) {
-						hArray.push(hArray.shift());
-					} else {
-						hArray.unshift(hArray.pop());
-					}
-					
-					this.huesArray = hArray;
-				},
-				
-				
-				cycleColors: function(spans, _thisCache) {
-					var thisCache = _thisCache;
-					itv = setInterval(function(){
-						thisCache.shiftHuesArray();
-						var hues = $.makeArray(thisCache.huesArray);
-						spans.each(function(i){
-							$(this).attr({style:"color:hsla("+ hues[i] +","+ thisCache.saturation +"% ,"+ thisCache.light +"%, 1)"});
-						});
+		[].map.call(document.querySelectorAll(opts.patronus+""), function(el) {
+			var stepSize = 360/el.innerText.length,
+				animationTime = opts.duration,
+				reverse = (opts.bowFlow === 'ltr');
 
-					}, thisCache.settings.speed);
-				},
-				
-				
-				stopCycle: function(spans){
-					// stop color cycling
-					clearInterval(itv);
-					// return affected chars to default styling
-					spans.each(function() {
-						$(this).attr({style: ""})
-					});
-				}
-		};
+			el.innerHTML = el.innerText.split('').map(function(char, i) {
 
-		// A really lightweight plugin wrapper around the constructor,
-		// preventing against multiple instantiations
-		$.fn[ pluginName ] = function ( options ) {
-				this.each(function() {
-						if ( !$.data( this, "plugin_" + pluginName ) ) {
-								$.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
-						}
-				});
+				var delay = (animationTime * ((i * stepSize) % 360) / 360) -
+						((~~!(!!reverse) - ~~!(!reverse)) * animationTime),
+					delayTime = Math.abs(delay).toFixed(3);
 
-				// chain jQuery functions
-				return this;
-		};
+				var attrStyle = 'style="'+ prefix + 'animation-delay: ' + delayTime + 's; ' +
+						prefix + 'animation-duration: ' + animationTime + 's;"';
 
-})( jQuery, window, document );
+				var mark = /^\S/gi.test(char) &&
+						'<span ' + attrStyle + '>' + char + '</span>' || char;
+
+				return mark;
+			}).join('');
+		});
+	};
+}(this.Expecto = this.Expecto || {}));
+
+// Demo-entors!
+Expecto.patronum('.duck', {
+	'duration': '.7',
+	'bowFlow':'ltr',
+	'cursor':'pointer'
+});
