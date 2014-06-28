@@ -8,15 +8,17 @@
 <body>
 
 	<h1>Hover this:</h1>
-	<h2 class="unicorn"><strong><a href="javascript:void(0)">swirling spectacle of cyclic rainbow splendor</a></strong></h2>
-	
-	
+	<h2 class="unicorn">swirling spectacle of cyclic rainbow splendor</h2>
+
+
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="unicorn.js"></script>
 	<script>
-	$(function(){
-		$(".unicorn").unicorn({"saturation":100, "light": 50});
-	});
+		Expecto.patronum('.unicorn', {
+			'duration': '.2',
+			'bowFlow':'rtl',
+			'cursor':'pointer'
+		});
 	</script>
     </body>
 </html>

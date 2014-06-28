@@ -29,7 +29,7 @@
   \*/
 
   	// Thanks, DW. http://davidwalsh.name/vendor-prefix
-  	// Read his blog, advert $++! Plus it's awesome.
+	// Read @davidwalshblog, advert $++! Plus it's awesome.
 	var computed = window.getComputedStyle(document.documentElement, ''),
 		pfx = ([].slice.call(computed).join('').match(/-(moz|webkit|ms)-/) ||
 				(computed.Olink === '' && ['', 'o']))[1],
@@ -86,12 +86,12 @@
 		[].map.call(document.querySelectorAll(opts.patronus+""), function(el) {
 			var stepSize = 360/el.innerText.length,
 				animationTime = opts.duration,
-				reverse = (opts.bowFlow === 'ltr');
+				ltr = (opts.bowFlow === 'ltr');
 
 			el.innerHTML = el.innerText.split('').map(function(char, i) {
 
 				var delay = (animationTime * ((i * stepSize) % 360) / 360) -
-						((~~!(!!reverse) - ~~!(!reverse)) * animationTime),
+						(-(~-ltr|~-ltr) * animationTime),
 					delayTime = Math.abs(delay).toFixed(3);
 
 				var attrStyle = 'style="'+ prefix + 'animation-delay: ' + delayTime + 's; ' +
@@ -107,8 +107,8 @@
 }(this.Expecto = this.Expecto || {}));
 
 // Demo-entors!
-Expecto.patronum('.duck', {
-	'duration': '.7',
-	'bowFlow':'ltr',
-	'cursor':'pointer'
-});
+// Expecto.patronum('.unicorn', {
+// 	'duration': '.2',
+// 	'bowFlow':'ltr',
+// 	'cursor':'pointer'
+// });
