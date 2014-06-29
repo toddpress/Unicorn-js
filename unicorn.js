@@ -55,7 +55,7 @@
 			bowFlow: options.bowFlow+'' || 'rtl'
 		};
 
-		var styles = [ // prefixed styles dur
+		var styles = [
 			{
 				selector: opts.patronus + ' span',
 				rules: [prefix + 'animation: default_text 1.5s linear infinite;',
@@ -83,7 +83,7 @@
 		  sheet.insertRule(styles[i].selector + '{' + styles[i].rules.join('') + '}', i);
 		}
 
-		[].map.call(document.querySelectorAll(opts.patronus+""), function(el) {
+		[].map.call(document.querySelectorAll(opts.patronus+''), function(el) {
 			var stepSize = 360/el.innerText.length,
 				animationTime = opts.duration,
 				ltr = (opts.bowFlow === 'ltr');
