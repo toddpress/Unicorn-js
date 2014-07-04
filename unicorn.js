@@ -1,4 +1,4 @@
-(function(__x__){
+(function(ˉºnnר){
   /*\
   |*| Unicorn.js -- v2, bitches.
   |*| Copyright (C) 6/24/2014 toddpress
@@ -44,7 +44,7 @@
 		return style.sheet;
 	})();
 
-	__x__.patronum = function(patronus, options){
+	ˉºnnר.patronum = function(patronus, options){
 		var opts = {
 			patronus: (patronus || '')
 				? patronus+''
