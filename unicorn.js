@@ -75,7 +75,7 @@
 			},
 			{
 				selector: '@' + prefix + 'keyframes default_text',
-				rules: ['to {color: rgb(102, 102, 102);}']
+				rules: ['to {color: inherit;}']
 			}
 		];
 
