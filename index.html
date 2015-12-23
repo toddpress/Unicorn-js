@@ -2,23 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-	<title>Unicorn.js demo</title>
+    <title>Unicorn.js demo</title>
     <meta name="description" content="">
+    <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-	<h1>Hover this:</h1>
-	<h2 class="unicorn">swirling spectacle of cyclic rainbow splendor</h2>
-
-
-	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="unicorn.js"></script>
-	<script>
-		Expecto.patronum('.unicorn', {
-			'duration': '.2',
-			'bowFlow':'rtl',
-			'cursor':'pointer'
-		});
-	</script>
+    <pre id="such_whitespaces">
+        <h1 class="title">unicorn.<span>js</span></h1>
+        <div class="unicorn">                                          / .?  </div>
+        <div class="unicorn">                                 \       , //  </div>
+        <div class="unicorn">                                |\.--._/|//  </div>
+        <div class="unicorn">                               /\ ) ) ).'/  </div>
+        <div class="unicorn">                              /(  \  // /  </div>
+        <div class="unicorn">                              /(   J`((_/ \\  </div>
+        <div class="unicorn">                              / ) | _\     /  </div>
+        <div class="unicorn">                              /|)  \  eJ    L  </div>
+        <div class="unicorn">                              |  \ L \   L   L  </div>
+        <div class="unicorn">                              /  \  J  `. J   L  </div>
+        <div class="unicorn">                              |  )   L   \/   \\  </div>
+        <div class="unicorn">                              /  \    J   (\   /  </div>
+        <div class="unicorn">            _....___         |  \      \   \```  </div>
+        <div class="unicorn"> ,.._.-'        '''--...-||\     -. \   \  </div>
+        <div class="unicorn">.'.=.'                    `         `.\ [ Y  </div>
+        <div class="unicorn">/   /                                  \]  J  </div>
+        <div class="unicorn">Y / Y                                    Y   L  </div>
+        <div class="unicorn">| | |          \                         |   L  </div>
+        <div class="unicorn">| | |           Y                        A  J   </div>
+        <div class="unicorn">|   I           |                       /I\ /  </div>
+        <div class="unicorn">|    \          I             \        ( |]/|  </div>
+        <div class="unicorn">J     \         /._           /        -tI/ |  </div>
+        <div class="unicorn">L     )       /   /'-------'J           `'-:.  </div>
+        <div class="unicorn">J   .'      ,'  ,' ,     \   `'-.__          \\  </div>
+        <div class="unicorn">\ T      ,'  ,'   )\    /|        ';'---7   /  </div>
+        <div class="unicorn">\|    ,'L  Y...-' / _.' /         \   /   /  </div>
+        <div class="unicorn">J   Y  |  J    .'-'   /         ,--.(   /  </div>
+        <div class="unicorn">L  |  J   L -'     .'         /  |    /\\  </div>
+        <div class="unicorn">|  J.  L  J     .-;.-/       |    \ .' /  </div>
+        <div class="unicorn">J   L`-J   L____,.-'`        |  _.-'   |  </div>
+        <div class="unicorn">L  J   L  J                  ``  J    |  </div>
+        <div class="unicorn">J   L  |   L                     J    |  </div>
+        <div class="unicorn">L  J  L    \                    L    \\  </div>
+        <div class="unicorn">|   L  ) _.'\         ....       ) _.'\\  </div>
+        <div class="unicorn">L    \('`    \   ..........    ('`    \\  </div>
+        <div class="unicorn">) _.'\`-....'...............   `-....'  </div>
+        <div class="unicorn">('`    \ ...............................  </div>
+        <div class="unicorn">`-.___/  :::::::::::::``  :::::::::::::  </div>
+        <div class="unicorn">..............;;;:;;..'`''`:::::;;;;;::;;''""`'  </div>
+        <h2 id="hooferer" class="unicorn">hoofer me</h2>
+    </pre>
+    <!-- @todo: include Babel.js -->
+    <script src="unicorn.es6.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (e) => {
+            Unicorn(document.querySelectorAll('.unicorn'), {
+                'patronus': 'phoenix',
+                'duration': 1.4,
+            });
+        });
+    </script>
     </body>
 </html>

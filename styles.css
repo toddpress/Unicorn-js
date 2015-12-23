@@ -1,0 +1,65 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  text-align: center;
+  background: slateblue;
+  padding-top: 32px;
+  font: 12px/0.5em Monaco, MonoSpace;
+}
+#such_whitespaces {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.unicorn {
+  display: inline-block;
+  line-height: 0.5em;
+  position: relative;
+  margin: 0 auto;
+  font: 300 120%/1 Monaco, Monospace;
+  letter-spacing: -0.05em;
+  color: mintcream;
+  cursor: default;
+  max-width: 400px;
+  max-height: 100%;
+}
+#hooferer.unicorn {
+  font: 300 40px/1.8 "Roboto", sans-serif;
+  margin-right: -20px;
+  letter-spacing: 0.05em;
+}
+.title {
+  color: #a6a6ed;
+  position: absolute;
+  display: inline-block;
+  top: 15%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font: 300 30px/1 "Roboto", sans-serif;
+  padding: 15px 0px;
+  z-index: 20;
+}
+.title span {
+  width: 100%;
+  color: #8d82dc;
+  letter-spacing: -3px;
+}
+::selection {
+  background: #454545;
+  /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #454545;
+  /* Gecko Browsers */
+}
